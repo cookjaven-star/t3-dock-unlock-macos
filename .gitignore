@@ -1,0 +1,11 @@
+# 构建产物
+build/
+obj/
+
+# 依赖（由 ./fetch_zydis.sh 按需下载，不入库）
+zydis-*/
+zydis.zip
+
+# macOS
+.DS_Store
+._*

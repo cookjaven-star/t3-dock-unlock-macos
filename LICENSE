@@ -1,0 +1,49 @@
+MIT License
+
+## Thunderbolt3Unblocker（上游）
+
+Except where noted below, the code in `src/` originating from the upstream
+project is licensed under the MIT License:
+
+    Copyright 2018 Ryan Govostes
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+Upstream: https://github.com/rgov/Thunderbolt3Unblocker
+
+## 本仓库新增部分
+
+`src/Thunderbolt3Unblocker/kmod_info.c`、`src/Thunderbolt3Unblocker/NVRAM.cpp`
+（stub 版）、`build.sh`、`deploy.sh`、`fetch_zydis.sh`、`tools/`、`docs/` 以及本
+说明文件，同样以 MIT License 发布：
+
+    Copyright 2026 Javen
+
+---
+
+## 免责声明
+
+本项目通过内存热补丁修改 Apple 内核扩展 `IOThunderboltFamily` 的运行时行为，
+绕开 Apple 维护的「不受支持外设」名单。使用本软件需要关闭部分 SIP 保护。
+
+- 可能导致系统不稳定或内核崩溃（kernel panic）
+- 可能在 macOS 升级后失效，甚至影响开机
+- 可能违反设备保修条款或当地法律法规
+
+请自行评估风险，务必备份数据。作者不对任何损失负责。
